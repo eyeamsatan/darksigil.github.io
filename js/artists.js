@@ -11,9 +11,9 @@ const artists = [
         cover: "assets/images/covers/cover2.svg",
         heroImage: "assets/images/artists/placeholder.svg",
         theme: {
-            primary: "#bf47ff",
+            primary: "#ff4757",
             secondary: "#ffa502",
-            accentGlow: "rgba(86, 255, 71, 0.6)",
+            accentGlow: "rgba(255, 71, 87, 0.6)",
             fontDisplay: "'Reenie Beanie', cursive",
             bgOverlay: "radial-gradient(circle at 30% 50%, rgba(255, 71, 87, 0.15) 0%, transparent 60%)"
         },
