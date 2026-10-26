@@ -11,10 +11,10 @@ const artists = [
         cover: "assets/images/covers/cover2.svg",
         heroImage: "assets/images/artists/placeholder.svg",
         theme: {
-            primary: "#ff4757",
+            primary: "#bf47ff",
             secondary: "#ffa502",
-            accentGlow: "rgba(255, 71, 87, 0.6)",
-            fontDisplay: "'Pirata One', cursive",
+            accentGlow: "rgba(86, 255, 71, 0.6)",
+            fontDisplay: "'Reenie Beanie', cursive",
             bgOverlay: "radial-gradient(circle at 30% 50%, rgba(255, 71, 87, 0.15) 0%, transparent 60%)"
         },
         social: { 
@@ -41,7 +41,7 @@ const artists = [
             primary: "#ff6b6b",
             secondary: "#feca57",
             accentGlow: "rgba(255, 107, 107, 0.5)",
-            fontDisplay: "'MBThinWorms', 'Pirata One', cursive",
+            fontDisplay: "'Fontdiner Swanky', 'Pirata One', cursive",
             bgOverlay: "radial-gradient(circle at 70% 50%, rgba(254, 202, 87, 0.12) 0%, transparent 60%)"
         },
         social: { 
