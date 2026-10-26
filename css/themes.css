@@ -1,0 +1,135 @@
+/* Themes CSS */
+.artist-theme {
+    /* Will be set by JavaScript */
+}
+
+/* Studio specific styles */
+.studio-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.studio-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 71, 87, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 165, 2, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.studio-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.studio-title {
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--studio-red) 0%, var(--studio-yellow) 50%, var(--studio-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        0 0 40px var(--studio-red-glow),
+        0 0 80px var(--studio-yellow-glow);
+    line-height: 1.2;
+}
+
+.studio-subtitle {
+    font-size: 1.8rem;
+    color: var(--studio-yellow);
+    margin-bottom: 1rem;
+    font-family: 'Pirata One', cursive;
+    letter-spacing: 0.1em;
+}
+
+.studio-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+/* Artist theme application */
+[data-artist-theme] {
+    --theme-primary: var(--studio-red);
+    --theme-secondary: var(--studio-yellow);
+    --theme-glow: var(--studio-red-glow);
+}
+
+/* Sigil decoration */
+.sigil-decoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.sigil-decoration.top-left {
+    top: 10%;
+    left: 5%;
+    transform: rotate(-30deg);
+}
+
+.sigil-decoration.bottom-right {
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(30deg);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .studio-title {
+        font-size: 3rem;
+        letter-spacing: 0.15em;
+    }
+    
+    .studio-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .studio-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .studio-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .studio-description {
+        font-size: 1rem;
+    }
+    
+    .sigil-decoration {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .studio-title {
+        font-size: 1.8rem;
+    }
+    
+    .studio-subtitle {
+        font-size: 1rem;
+    }
+}

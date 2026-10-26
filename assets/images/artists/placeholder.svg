@@ -1,0 +1,13 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sigilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4757;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa502;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#sigilGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M100 20 L100 180 M20 100 L180 100" stroke="url(#sigilGrad)" stroke-width="2" opacity="0.6"/>
+  <polygon points="100,40 130,80 100,70 70,80" fill="none" stroke="url(#sigilGrad)" stroke-width="2" opacity="0.7"/>
+  <circle cx="100" cy="100" r="25" fill="none" stroke="url(#sigilGrad)" stroke-width="2" opacity="0.8"/>
+  <circle cx="100" cy="100" r="10" fill="url(#sigilGrad)" opacity="0.9"/>
+</svg>

@@ -1,0 +1,222 @@
+/* Base Styles - Dark Sigil Studios */
+@font-face {
+    font-family: 'MBThinWorms';
+    src: url('../assets/fonts/mb-thin-worms.woff2') format('woff2'),
+         url('../assets/fonts/mb-thin-worms.woff') format('woff');
+    font-weight: 100 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Studio Theme (Default) */
+    --studio-bg: #050505;
+    --studio-bg-secondary: #0a0a0a;
+    --studio-red: #ff4757;
+    --studio-red-glow: rgba(255, 71, 87, 0.6);
+    --studio-yellow: #ffa502;
+    --studio-yellow-glow: rgba(255, 165, 2, 0.5);
+    --studio-accent: #ff6348;
+    
+    /* Panels */
+    --panel-bg: rgba(20, 20, 25, 0.65);
+    --panel-bg-strong: rgba(15, 15, 20, 0.85);
+    --panel-border: rgba(255, 71, 87, 0.4);
+    --panel-border-hover: rgba(255, 71, 87, 0.7);
+    
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b9b9c3;
+    --text-muted: #71717a;
+    
+    /* Player Theme (can be overridden) */
+    --player-primary: var(--studio-red);
+    --player-secondary: var(--studio-yellow);
+    --player-glow: var(--studio-red-glow);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background: 
+        radial-gradient(ellipse at top, rgba(255, 71, 87, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(255, 165, 2, 0.1) 0%, transparent 50%),
+        var(--studio-bg);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 120px;
+}
+
+/* Display Font */
+.display-brand {
+    font-family: 'MBThinWorms', 'Pirata One', system-ui, sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Glass Panel */
+.glass-panel {
+    background: var(--panel-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+    border-color: var(--panel-border-hover);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.7),
+        0 0 20px var(--studio-red-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* App Main */
+.app-main {
+    min-height: calc(100vh - 70px);
+    padding-top: 70px;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, var(--studio-red), var(--studio-accent));
+    color: var(--text-primary);
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 0 20px var(--studio-red-glow);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--studio-red-glow), 0 0 40px var(--studio-yellow-glow);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: transparent;
+    color: var(--text-primary);
+    text-decoration: none;
+    border: 2px solid var(--studio-red);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: var(--studio-yellow);
+    box-shadow: 0 0 20px var(--studio-red-glow);
+}
+
+.btn-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--studio-red), var(--studio-accent));
+    color: var(--text-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-shadow: 0 0 15px var(--studio-red-glow);
+}
+
+.btn-play:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--studio-red-glow);
+}
+
+.btn-play-small {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--studio-red), var(--studio-accent));
+    color: var(--text-primary);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.875rem;
+    box-shadow: 0 0 10px var(--studio-red-glow);
+}
+
+.btn-play-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--studio-red-glow);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px var(--studio-red-glow);
+    }
+    50% {
+        box-shadow: 0 0 30px var(--studio-red-glow), 0 0 40px var(--studio-yellow-glow);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 140px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
